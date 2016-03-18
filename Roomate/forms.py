@@ -11,7 +11,7 @@ from web.models import validation
 import hashlib,random
 
 # Formato de mensaje para controlar correos duplicados en el registro
-DOBLE_EMAIL = _(u"Este correo ya está en uso. "u"Por favor utilice otro correo o inicie sesión")
+DOBLE_EMAIL = _(u"Este correo ya esta en uso. "u"Por favor utilice otro correo o inicie sesion")
 
 # Formulario de registro del usuario.
 class RegistrationForm(UserCreationForm):
@@ -86,7 +86,7 @@ class RegistrationForm(UserCreationForm):
             plenamente de tu cuenta:<br> \
            <a href='http://127.0.0.1:8000/accounts/confirm/%s'>Confirmar cuenta</a>" % (user.username, Activation_key)
             subject, from_email = 'hello', 'no-reply@magnasis.com'
-            text_content = 'Correo de confirmación.'
+            text_content = 'Correo de confirmacion.'
             #html_content = '<p>This is an <strong>important</strong> message.</p>'
             msg = EmailMultiAlternatives(email_subject, text_content, from_email, [user.email])
             msg.attach_alternative(email_body, "text/html")

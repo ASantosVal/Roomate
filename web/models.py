@@ -133,9 +133,9 @@ class FotoHabitacion(models.Model):
     habitacion = models.ForeignKey(Habitacion, blank=True, null=True)
 
 
-#esta clase solo sirve para realizar busquedas. Nada más
+#esta clase solo sirve para realizar busquedas. Nada mas
 class Busqueda(models.Model):
-    #las elecciones posibles de la opción de sexo. del usuario
+    #las elecciones posibles de la opcion de sexo. del usuario
     GENDER_CHOICES = (
         ('', 'Ambos'),
         ('H', 'Hombre'),

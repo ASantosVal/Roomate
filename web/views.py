@@ -363,7 +363,7 @@ def filtros(sex,fumador,city):
             else:
                 return Profile.objects.filter(ocupation='E',lookingIn=city,isSmoker=True,gender=sex).all()
 
-#buscar compañeros de piso
+#buscar companeros de piso
 @login_required
 def busquedaCompa(request):
     if request.method == "POST":
