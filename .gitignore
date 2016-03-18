@@ -6,7 +6,6 @@ db.sqlite3
 .idea/
 idea/
 /backups
-web/migrations/__init__.py
 .requirements
 /.pydevproject
 /.project
