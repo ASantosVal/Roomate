@@ -47,12 +47,12 @@ class RegistrationForm(UserCreationForm):
 
         # Expresion regular que comprueba si la password tiene al menos 8 caracteres,
         # entre los cuales debe haber como minimo un digito y una letra
-        valid = re.match(r'^(?=.*[A-Za-zñÑ])(?=.*\d).{8,}$', password2)
+        valid = re.match(r'^(?=.*[A-Za-z])(?=.*\d).{8,}$', password2)
 
         # Si la password no cumple estos requisitos, se eleva un error
         if not valid:
             raise forms.ValidationError(
-                "La contraseña debe tener una longitud mínima de 8 caracteres y contener, al menos, una letra y un número",
+                "La contrasena debe tener una longitud minima de 8 caracteres y contener, al menos, una letra y un numero",
                 code='invalid_password',
             )
 
@@ -73,12 +73,12 @@ class ValidatedPasswordChangeForm(PasswordChangeForm):
 
         # Expresion regular que comprueba si la password tiene al menos 8 caracteres,
         # entre los cuales debe haber como minimo un digito y una letra
-        valid = re.match(r'^(?=.*[A-Za-zñÑ])(?=.*\d).{8,}$', password2)
+        valid = re.match(r'^(?=.*[A-Za-z])(?=.*\d).{8,}$', password2)
 
         # Si la password no cumple estos requisitos, se eleva un error
         if not valid:
             raise forms.ValidationError(
-                "La contraseña debe tener una longitud mínima de 8 caracteres y contener, al menos, una letra y un número",
+                "La contrasena debe tener una longitud minima de 8 caracteres y contener, al menos, una letra y un numero",
                 code='invalid_password',
             )
 
@@ -91,12 +91,12 @@ class ValidatedSetPasswordForm(SetPasswordForm):
 
         # Expresion regular que comprueba si la password tiene al menos 8 caracteres,
         # entre los cuales debe haber como minimo un digito y una letra
-        valid = re.match(r'^(?=.*[A-Za-zñÑ])(?=.*\d).{8,}$', password2)
+        valid = re.match(r'^(?=.*[A-Za-z])(?=.*\d).{8,}$', password2)
 
         # Si la password no cumple estos requisitos, se eleva un error
         if not valid:
             raise forms.ValidationError(
-                "La contraseña debe tener una longitud mínima de 8 caracteres y contener, al menos, una letra y un número",
+                "La contrasena debe tener una longitud minima de 8 caracteres y contener, al menos, una letra y un numero",
                 code='invalid_password',
             )
 

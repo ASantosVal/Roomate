@@ -37,7 +37,7 @@ class Profile(models.Model):
 
     # Expresion regular para validar el numero de telefono
     phone_regex = RegexValidator(regex=r'^\+?1?\d{9,15}$',
-                                 message=u'Número de teléfono inválido (debe tener de 9 a 15 dígitos)')
+                                 message=u'Numero de telefono invalido (debe tener de 9 a 15 digitos)')
 
     # Usuario asociado al perfil (un perfil por usuario)
     user = models.OneToOneField('auth.User', models.CASCADE, related_name='profile')
@@ -95,7 +95,7 @@ class Tag(models.Model):
 class Casa(models.Model):
     id = models.AutoField(primary_key=True)
     dueno = models.ForeignKey('auth.User', models.CASCADE, blank=True, null=True, related_name="casas")
-    direccion=models.TextField(verbose_name="Dirección")
+    direccion=models.TextField(verbose_name="Direccion")
     ciudad = models.CharField(max_length=200)
     numHabitaciones = models.IntegerField()
     numHabitacionesDisponibles = models.IntegerField()
